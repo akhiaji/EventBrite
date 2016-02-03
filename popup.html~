@@ -6,11 +6,9 @@
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
-		min-width: 500px;
 		background-color: #ffffe5 !important;
       }
       #status {
-        /* avoid an excessively wide status text */
         white-space: pre;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -28,11 +26,9 @@
 	<script src="myscripts.js"></script>
   </head>
   <body>
-    <div id="status"></div>
-	<h1>Find Events</h1>
+	<h1 style="margin: auto !important">Find Events</h1>
 	<button id="otherLocation" class="btn-default col-centered">Search Other Location</button>
-	<div id="form" class = "form-group col-centered" hidden>
-		<div> leave blank for current location</div>
+	<div id="form" class = "form-group col-centered" style="margin: auto !important" hidden>
 		<div id="labels"  class="col-xs-3">
 			<label style = "margin-right:0px" for="address">Address:</label><br>
 			<label style = "margin-right:30px" for="city">City:</label><br>

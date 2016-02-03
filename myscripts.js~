@@ -71,6 +71,8 @@ $(document).ready(function(){
 		} else {
 			$("#form").hide();
 			$(this).text("Use Current Location")
+			currentLocation = true;
+		}
 
 		
 	});
