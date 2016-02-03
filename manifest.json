@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Event Finder",
+  "description": "This extension shows nearby events for a given location",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+  "permissions": [
+    "activeTab",
+    "geolocation",
+    "https://ajax.googleapis.com/"
+  ]
+}

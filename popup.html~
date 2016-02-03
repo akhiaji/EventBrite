@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Nearby Events</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+		min-width: 500px;
+		background-color: #ffffe5 !important;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+	  button {
+	 	background-color: #ffa266 !important;
+		border-radius: 25px !important;
+		color: #ffffe5 !important;
+	  }
+    </style>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="bob.js"></script>
+	<script src="myscripts.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+	<h1>Find Events</h1>
+	<button id="otherLocation" class="btn-default col-centered">Search Other Location</button>
+	<div id="form" class = "form-group col-centered" hidden>
+		<div> leave blank for current location</div>
+		<div id="labels"  class="col-xs-3">
+			<label style = "margin-right:0px" for="address">Address:</label><br>
+			<label style = "margin-right:30px" for="city">City:</label><br>
+			<label style = "margin-right:30px" for="state">State:</label><br>
+			<label style = "margin-right:30px"for="country">Country:</label><br>
+			<label style = "margin-right:30px"for="points">Max Distance:</label><br>
+		</div>
+		<div  class="col-xs-9">
+			<input id = "address" class=".form-control" type="text" name="address"><br>	
+			<input id = "city" class=".form-control" type="text"  name="city"><br>
+			<input id = "state" class=".form-control" type="text"  name="state"><br>
+			<input id = "country" class=".form-control" type="text" name="country"><br>
+			<input type="range" name="points" id="slider" value="20" min="2" max="100" style="width:50%">
+			<input type="text" id = "rangeBox" value="20" size="4">Miles<br>
+		</div><br>
+	</div>
+	<button id="checkPage" class="btn-default col-centered">Check events for the weekend</button>
+	<div id="open" hidden>
+		<div id="navigation" class="col-xs-4">
+			<button id='exitDescription'>back</button>
+		</div>
+		<div  id="location" class="col-xs-4">
+		</div>
+		<div  id="link" class="col-xs-4">
+			<a id="url" href="http://www.eventbrite.com/" target="_blank">Eventbrite Page</a>
+		</div><br>
+		<div id="description"class="col-xs-12">
+		</div>
+	</div>
+	<div style =  "width=500px">
+    <table id = "table" style="width:100%" class="table-hover" hidden>
+		<div id="fwdBck">
+			<button id='backButton' style="font-weight: 900" hidden>&#8678</button>
+			<button id='nextButton' style="font-weight: 900" hidden>&#8680</button>
+		</div>
+    	<thead>
+	  		<tr>
+				<th width="50%">Title</th>
+				<th width="30%">Date</th>
+				<th width="20%">Time</th>
+	  		</tr>
+		
+   		</thead>
+  		<tr class="clickable" style="cursor:pointer" id = "1">
+    		<td></td>
+    		<td></td> 
+    		<td></td>
+  		</tr>
+		<tr class="clickable" style="cursor:pointer" id = "2">
+    		<td></td>
+    		<td></td>
+    		<td></td>
+  		</tr>
+  		<tr class="clickable" style="cursor:pointer" id = "3">
+    		<td></td>
+    		<td></td> 
+    		<td></td>
+  		</tr>
+		<tr class="clickable" style="cursor:pointer" id = "4">
+    		<td></td>
+    		<td></td> 
+    		<td></td>
+  		</tr>
+  		<tr class="clickable" style="cursor:pointer" id = "5">
+    		<td></td>
+    		<td></td> 
+    		<td></td>
+  		</tr>
+
+	</table>
+	</div>
+  </body>
+</html>
+
